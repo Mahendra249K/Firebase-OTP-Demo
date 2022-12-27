@@ -1,0 +1,145 @@
+package com;
+
+import android.content.BroadcastReceiver;
+import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
+import com.all.Async_Internet;
+import com.all.Async_Task;
+import com.all.Basic;
+import com.all.BoadcastReciver;
+import com.all.BottomSheet;
+import com.all.Camera;
+import com.all.EditText_Layout;
+import com.all.Expanded_Listview;
+import com.all.Firebase;
+import com.all.ImageSlider_Viewpager;
+import com.all.Layouts;
+import com.all.Menu;
+import com.all.Navigation_Drawer;
+import com.all.Notification;
+import com.all.R;
+import com.all.SQLite_Database;
+import com.all.Services;
+import com.all.Shared_Preference;
+import com.all.Views;
+
+public class Main_Fragment_1 extends Fragment {
+
+    LinearLayout basic,layouts,views,ui_image_changer,notification,async,async_internet,broadcast,
+            services,share_preference,sqlite_databse,menu,bottom_sheet,expanded_listview,edittext_layout,
+            navigation_drawer,camera_gallary,firebase;
+
+ @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view= inflater.inflate(R.layout.fragment_main_1, container, false);
+
+        basic=view.findViewById(R.id.basic);
+        layouts=view.findViewById(R.id.layouts);
+        views=view.findViewById(R.id.views);
+        ui_image_changer=view.findViewById(R.id.ui_image_changer);
+        notification=view.findViewById(R.id.notification);
+        async=view.findViewById(R.id.async);
+        async_internet=view.findViewById(R.id.async_internet);
+        broadcast=view.findViewById(R.id.broadcast);
+        services=view.findViewById(R.id.services);
+        share_preference=view.findViewById(R.id.share_preference);
+        sqlite_databse=view.findViewById(R.id.sqlite_databse);
+        menu=view.findViewById(R.id.menu);
+        bottom_sheet=view.findViewById(R.id.bottom_sheet);
+        expanded_listview=view.findViewById(R.id.expanded_listview);
+        edittext_layout=view.findViewById(R.id.edittext_layout);
+        navigation_drawer=view.findViewById(R.id.navigation_drawer);
+        camera_gallary=view.findViewById(R.id.camera_gallary);
+        firebase=view.findViewById(R.id.firebase);
+
+
+        basic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(getContext(), Basic.class);
+                startActivity(intent);
+            }
+        });
+
+
+        layouts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), Layouts.class);
+                startActivity(intent);
+            }
+        });
+
+        views.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), Views.class);
+                startActivity(intent);
+            }
+        });
+
+        ui_image_changer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), ImageSlider_Viewpager.class);
+                startActivity(intent);
+            }
+        });
+
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), Notification.class);
+                startActivity(intent);
+            }
+        });
+
+        async.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), Async_Task.class);
+                startActivity(intent);
+            }
+        });
+        async_internet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), Async_Internet.class);
+                startActivity(intent);
+            }
+        });
+        broadcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), BoadcastReciver.class);
+                startActivity(intent);
+            }
+        });
+        services.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), Services.class);
+                startActivity(intent);
+            }
+        });
+        share_preference.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), Shared_Preference.cl
